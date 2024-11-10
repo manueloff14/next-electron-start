@@ -1,0 +1,28 @@
+{
+  "name": "next-electron-start",
+  "version": "0.1.0",
+  "main": "main/main.js",
+  "author": "Manuel Cabrera",
+  "description": "Next.js and Electron Starter",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"NEXT,ELECTRON\" -c \"yellow.bold,cyan.bold\" \"next dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "build": "next build && next export && electron-builder",
+    "start": "concurrently -n \"NEXT,ELECTRON\" -c \"yellow.bold,cyan.bold\" \"next start -p 3000\" \"wait-on http://localhost:3000 && electron .\"",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "electron-serve": "^2.1.1",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "wait-on": "^8.0.1"
+  }
+}

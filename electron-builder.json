@@ -1,0 +1,28 @@
+{
+    "appId": "com.tuempresa.miapp",
+    "productName": "MiAppElectronNext",
+    "directories": {
+        "buildResources": "assets",
+        "output": "dist"
+    },
+    "files": [
+        "main/**/*",
+        "out/**/*",
+        "package.json"
+    ],
+    "extraMetadata": {
+        "main": "main/main.js"
+    },
+    "win": {
+        "target": "nsis",
+        "icon": "assets/icon.ico"
+    },
+    "mac": {
+        "target": "dmg",
+        "icon": "assets/icon.icns"
+    },
+    "linux": {
+        "target": "AppImage",
+        "icon": "assets/icon.png"
+    }
+}
